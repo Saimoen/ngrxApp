@@ -1,0 +1,11 @@
+<mat-toolbar *ngIf="isLoggedin !== null">
+    <a routerLink="/">Mon LOGO</a>
+    <ul *ngIf="!isLoggedin">
+        <li class="m-10"><a routerLink="connexion">Connexion</a></li>
+        <li class="m-10"><a routerLink="inscription">Inscription</a></li>
+    </ul>
+    <ul *ngIf="isLoggedin">
+        <li class="m-10"><a routerLink="profil">Profil</a></li>
+        <li style="cursor: pointer" class="m-10" (click)="logout.emit(true)">Deconnexion</li>
+    </ul>
+</mat-toolbar>

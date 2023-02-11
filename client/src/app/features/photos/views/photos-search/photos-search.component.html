@@ -1,0 +1,6 @@
+<div class="container">
+    <div class="content">
+        <app-photos-searchbar [isLoading]="isLoading$ | async" (search)="searchPhoto($event)"></app-photos-searchbar>
+        <app-photos-list [photos]="photos$ | async"></app-photos-list>
+    </div>
+</div>

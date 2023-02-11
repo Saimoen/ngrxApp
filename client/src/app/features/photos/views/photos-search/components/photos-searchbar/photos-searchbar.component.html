@@ -1,0 +1,9 @@
+<mat-card>
+      <input
+        type="text"
+        [(ngModel)]="inputSearch"
+        (input)="search.emit(inputSearch)"
+        placeholder="Rechercher"
+      />
+</mat-card>
+<mat-progress-bar mode="indeterminate" *ngIf="isLoading"></mat-progress-bar>
